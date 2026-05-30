@@ -1,182 +1,1245 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aqua Welt RO Spares | Global Water Solutions</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Header -->
-    <header id="navbar">
-        <div class="container header-container">
-            <div class="logo">
-                <img src="src/LOGO.png" alt="Global Water Solutions Logo" class="brand-logo">
-                <div class="logo-text">
-                    <h1><span style="color: #00A651;">Global</span> Water Solutions</h1>
-                    <span class="logo-telugu">గ్లోబల్ వాటర్ సొల్యూషన్స్</span>
-                </div>
-            </div>
-            <nav class="desktop-nav">
-                <a href="index.html#home">Home</a>
-                <a href="index.html#services">Services</a>
-                <div class="dropdown">
-                    <a href="#">Store <span style="font-size: 0.8em; margin-left: 2px;">&#9662;</span></a>
-                    <div class="dropdown-menu">
-                        <a href="store-domestic-ro.html">RO Water Purifiers</a>
-                        <a href="store-commercial-ro.html">Commercial RO Water Purifier Systems</a>
-                        <a href="store-softeners.html">Softeners</a>
-                        <a href="store-geysers.html">Geysers & Water Heaters</a>
-                        <a href="store-ac.html">Air Conditioners</a>
-                        <a href="store-spares.html">RO Spares</a>
-                    </div>
-                </div>
-                <a href="index.html#gallery">Gallery</a>
-                <a href="index.html#brands">Brands</a>
-                <a href="index.html#why-us">Why Us</a>
-            </nav>
-            <div class="header-cta">
-                <a href="tel:+918801982960" class="btn btn-primary btn-sm">📞 Call Now</a>
-                <button class="mobile-menu-btn" aria-label="Toggle Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div class="mobile-menu">
-            <a href="index.html#home">Home</a>
-            <a href="index.html#services">Services</a>
-            <a href="#">Store <span style="font-size: 0.8em; margin-left: 2px;">&#9662;</span></a>
-            <div class="mobile-dropdown-menu">
-                <a href="store-domestic-ro.html">RO Water Purifiers</a>
-                <a href="store-commercial-ro.html">Commercial RO Water Purifier Systems</a>
-                <a href="store-softeners.html">Softeners</a>
-                <a href="store-geysers.html">Geysers & Water Heaters</a>
-                <a href="store-ac.html">Air Conditioners</a>
-                <a href="store-spares.html">RO Spares</a>
-            </div>
-            <a href="index.html#gallery">Gallery</a>
-            <a href="index.html#brands">Brands</a>
-            <a href="index.html#why-us">Why Us</a>
-        </div>
-    </header>
+/* ==========================================================================
+   CSS Variables & Tokens
+   ========================================================================== */
+:root {
+    /* Colors - Brand (Water/Trust Theme) */
+    --clr-primary: #004B87;      /* Deep Sea Blue - Trust, Authority */
+    --clr-primary-light: #0066B3;
+    --clr-secondary: #00A2D1;    /* Aqua/Cyan - Freshness, Purity */
+    --clr-secondary-light: #E0F4FA;
+    
+    /* Colors - Neutral */
+    --clr-text-main: #1F2937;
+    --clr-text-muted: #4B5563;
+    --clr-bg-main: #FFFFFF;
+    --clr-bg-alt: #F3F4F6;
+    --clr-border: #E5E7EB;
+    
+    /* Colors - Accent */
+    --clr-star: #F59E0B;         /* Gold for 5.0 stars */
+    --clr-success: #10B981;
+    
+    /* Typography */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Spacing & Layout */
+    --max-width: 1200px;
+    --section-pad: 5rem 1rem;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    
+    /* Effects */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --transition: all 0.3s ease;
+}
 
-    <main>
-        <div style="padding-top: 80px;"></div>
+/* ==========================================================================
+   Reset & Base Styles
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        <!-- SPARE PARTS -->
-        <section id="spare-parts" class="store-section bg-light-blue">
-            <div class="container">
-                <div class="section-header text-center">
-                    <h3 class="section-title">Aqua Welt RO Spares</h3>
-                    <p class="section-desc">Genuine components for maintenance, filter replacement, and service engineers.</p>
-                </div>
-                
-                <div class="product-grid">
-                    <div class="product-card">
-                        <div class="product-img-box">
-                            <span class="product-tag">Spare Part</span>
-                            <div class="img-placeholder">Image</div>
-                        </div>
-                        <div class="product-info">
-                            <h4>Aqua Welt RO Booster Pump</h4>
-                            <p class="price">₹2,850</p>
-                            <p class="suitable-for">For stable RO water pressure</p>
-                        </div>
-                        <div class="product-actions">
-                            <a href="https://wa.me/918801982960?text=Hi,%20I%20would%20like%20to%20order%20the%20RO%20Booster%20Pump" target="_blank" class="btn btn-whatsapp">WhatsApp Inquiry</a>
-                        </div>
-                    </div>
+html {
+    scroll-behavior: smooth;
+}
 
-                    <div class="product-card">
-                        <div class="product-img-box">
-                            <span class="product-tag">Spare Part</span>
-                            <div class="img-placeholder">Image</div>
-                        </div>
-                        <div class="product-info">
-                            <h4>Aqua Welt RO Membrane 80 GPD</h4>
-                            <p class="price">₹1,950</p>
-                            <p class="suitable-for">High performance membrane</p>
-                        </div>
-                        <div class="product-actions">
-                            <a href="https://wa.me/918801982960?text=Hi,%20I%20would%20like%20to%20order%20the%20RO%20Membrane" target="_blank" class="btn btn-whatsapp">WhatsApp Inquiry</a>
-                        </div>
-                    </div>
+body {
+    font-family: var(--font-body);
+    color: var(--clr-text-main);
+    background-color: var(--clr-bg-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-                    <div class="product-card">
-                        <div class="product-img-box">
-                            <span class="product-tag">Kit</span>
-                            <div class="img-placeholder">Image</div>
-                        </div>
-                        <div class="product-info">
-                            <h4>Replacement Kit 5 in 1</h4>
-                            <p class="price">₹5,000</p>
-                            <p class="suitable-for">Complete RO service kit</p>
-                        </div>
-                        <div class="product-actions">
-                            <a href="https://wa.me/918801982960?text=Hi,%20I%20would%20like%20to%20order%20the%20Replacement%20Kit" target="_blank" class="btn btn-whatsapp">WhatsApp Inquiry</a>
-                        </div>
-                    </div>
-                </div>
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--clr-primary);
+}
 
-                <div class="other-spares-list text-center">
-                    <h4 style="margin-top: 3rem; margin-bottom: 1rem;">Also Available:</h4>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem;">
-                        <span class="spare-pill">RO Filters</span>
-                        <span class="spare-pill">Sediment Filters</span>
-                        <span class="spare-pill">Carbon Filters</span>
-                        <span class="spare-pill">TDS Controllers</span>
-                        <span class="spare-pill">Solenoid Valves</span>
-                        <span class="spare-pill">SMPS</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
 
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-container">
-            <div class="footer-brand">
-                <div class="logo">
-                    <img src="src/LOGO.png" alt="Global Water Solutions Logo" class="brand-logo">
-                    <div class="logo-text">
-                        <h3><span style="color: #00A651;">Global</span> Water Solutions</h3>
-                        <span class="logo-telugu">గ్లోబల్ వాటర్ సొల్యూషన్స్</span>
-                    </div>
-                </div>
-                <p>Your dependable local specialist for water purifier sales, repair, and service support in Tirupati.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html#home">Home</a></li>
-                    <li><a href="index.html#services">Our Services</a></li>
-                    <li><a href="index.html#gallery">Gallery</a></li>
-                    <li><a href="index.html#why-us">Why Choose Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h4>Contact</h4>
-                <p>📍 <a href="https://www.google.com/maps/place/Global+Water+Solutions/@13.634712,79.421446,17z/data=!4m15!1m8!3m7!1s0x3a4d4ba5ccf7b1e5:0x3122dc1c02b946a7!2sGlobal+Water+Solutions!8m2!3d13.634638!4d79.421603!10e1!16s%2Fg%2F11f64hcysd!3m5!1s0x3a4d4ba5ccf7b1e5:0x3122dc1c02b946a7!8m2!3d13.634638!4d79.421603!16s%2Fg%2F11f64hcysd?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="contact-link">Shop 35, Sridevi Complex, Tilak Rd, Tirupati</a></p>
-                <p>📞 <a href="tel:+918801982960" class="contact-link">Call: +91 8801982960</a></p>
-                <p>📞 <a href="tel:+919393588818" class="contact-link">Call: +91 9393588818</a></p>
-                <p>💬 <a href="https://wa.me/918801982960" target="_blank" class="contact-link">WhatsApp: +91 8801982960</a></p>
-                <p>GST Registered Proprietorship</p>
-                <p>Mon - Sat: 9:00 AM - 9:30 PM</p>
-                <p>Sun: 9:00 AM - 9:30 PM</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2026 Global Water Solutions. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.text-center { text-align: center; }
+.w-full { width: 100%; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--clr-primary);
+    color: #fff;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+    background-color: var(--clr-primary-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+    background-color: var(--clr-secondary);
+    color: #fff;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-secondary:hover {
+    background-color: #0088B0;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--clr-primary);
+    color: var(--clr-primary);
+}
+
+.btn-outline:hover {
+    background-color: var(--clr-secondary-light);
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--clr-border);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+header.scrolled {
+    box-shadow: var(--shadow-sm);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    display: none; /* Hide if not needed anymore, or keep for fallback */
+}
+
+.brand-logo {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text h1 {
+    font-size: 1.25rem;
+    margin: 0;
+    color: var(--clr-primary);
+}
+
+.logo-telugu {
+    font-size: 0.75rem;
+    color: var(--clr-secondary);
+    font-weight: 500;
+}
+
+.desktop-nav {
+    display: none;
+    gap: 2rem;
+}
+
+.desktop-nav a {
+    font-weight: 500;
+    color: var(--clr-text-main);
+    position: relative;
+}
+
+.desktop-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--clr-secondary);
+    transition: var(--transition);
+}
+
+.desktop-nav a:hover::after {
+    width: 100%;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 300px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--clr-border);
+    border-top: 2px solid #FF6B6B; /* Based on the image showing a red top border */
+    z-index: 1000;
+    padding: 0.5rem 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.2s ease;
+}
+
+.dropdown-menu a {
+    color: var(--clr-text-main);
+    padding: 1rem 1.5rem;
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.dropdown-menu a::after {
+    display: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--clr-bg-main);
+    color: #FF6B6B;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile dropdown styles */
+.mobile-dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border-left: 2px solid var(--clr-border);
+}
+
+.mobile-dropdown-menu a {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    color: var(--clr-text-light);
+    text-transform: uppercase;
+}
+
+.mobile-dropdown-menu a:hover {
+    color: #FF6B6B;
+}
+.header-cta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mobile-menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 1001;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--clr-primary);
+    position: absolute;
+    transition: var(--transition);
+}
+
+.mobile-menu-btn span:nth-child(1) { top: 0; }
+.mobile-menu-btn span:nth-child(2) { top: 9px; }
+.mobile-menu-btn span:nth-child(3) { top: 18px; }
+
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 9px;
+}
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 9px;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: var(--clr-bg-main);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    border-top: 1px solid var(--clr-border);
+}
+
+.mobile-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu a {
+    font-size: 1.125rem;
+    font-weight: 500;
+    border-bottom: 1px solid var(--clr-bg-alt);
+    padding-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero {
+    padding-top: 120px;
+    padding-bottom: 4rem;
+    background: #ebf7fe;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    display: none;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.stars {
+    color: var(--clr-star);
+    letter-spacing: 2px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    color: var(--clr-primary);
+}
+
+.hero-description {
+    font-size: 1.125rem;
+    color: var(--clr-text-muted);
+    margin-bottom: 2rem;
+    max-width: 540px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--clr-text-muted);
+}
+
+.check {
+    color: var(--clr-success);
+    font-weight: bold;
+    margin-right: 0.25rem;
+}
+
+.hero-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-product-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    transition: transform 0.3s ease;
+}
+
+.hero-product-image:hover {
+    transform: translateY(-10px);
+}
+
+.hero-image-placeholder {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-secondary) 100%);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: var(--shadow-lg);
+    animation: morph 8s ease-in-out infinite;
+    text-align: center;
+    padding: 2rem;
+}
+
+.water-drop {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.water-drop::before { content: '💧'; }
+
+.glass-effect {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: inherit;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.placeholder-text {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+@keyframes morph {
+    0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+    100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+}
+
+/* ==========================================================================
+   Trust Bar
+   ========================================================================== */
+.trust-bar {
+    background-color: white;
+    border-bottom: 1px solid var(--clr-border);
+    padding: 2rem 0;
+}
+
+.trust-bar-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--clr-bg-alt);
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+
+.trust-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-sm);
+    background: var(--clr-secondary-light);
+}
+
+.trust-item .icon {
+    font-size: 2rem;
+    background: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: var(--shadow-sm);
+}
+
+.trust-item strong {
+    display: block;
+    color: var(--clr-primary);
+    font-family: var(--font-heading);
+}
+
+.trust-item span {
+    font-size: 0.875rem;
+    color: var(--clr-text-muted);
+}
+
+/* ==========================================================================
+   Services Section
+   ========================================================================== */
+.services {
+    padding: var(--section-pad);
+    background-color: var(--clr-bg-main);
+}
+
+.section-header {
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    color: var(--clr-text-muted);
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.service-card {
+    background: white;
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--clr-secondary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-5px);
+    border-color: transparent;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: var(--clr-secondary-light);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: var(--clr-text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.service-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.service-list li::before {
+    content: '✓';
+    color: var(--clr-secondary);
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   Why Us / Testimonials
+   ========================================================================== */
+.why-us {
+    padding: var(--section-pad);
+    background-color: var(--clr-bg-alt);
+}
+
+.why-us-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.why-us-content h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+.why-us-content p {
+    font-size: 1.125rem;
+    color: var(--clr-text-muted);
+    margin-bottom: 2rem;
+}
+
+.feature-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.highlight-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--clr-secondary);
+    box-shadow: var(--shadow-sm);
+}
+
+.highlight-item h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-item p {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.reviews-showcase {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.review-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    position: relative;
+}
+
+.review-card::after {
+    content: '"';
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 4rem;
+    color: var(--clr-secondary-light);
+    font-family: serif;
+    line-height: 1;
+}
+
+.review-text {
+    font-size: 1.125rem;
+    font-style: italic;
+    margin: 1rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.reviewer {
+    font-weight: 600;
+    color: var(--clr-primary);
+}
+
+.floating-card {
+    display: none;
+}
+
+/* ==========================================================================
+   Contact Section
+   ========================================================================== */
+.contact {
+    padding: var(--section-pad);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-card {
+    background: var(--clr-bg-alt);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--clr-primary);
+}
+
+.info-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.info-card p {
+    color: var(--clr-text-muted);
+}
+
+.info-card a {
+    color: var(--clr-primary);
+    font-weight: 600;
+}
+
+.info-card a:hover {
+    text-decoration: underline;
+}
+
+.map-container {
+    height: 100%;
+    min-height: 400px;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #E5E7EB, #D1D5DB);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+}
+
+.map-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+    background-color: var(--clr-primary);
+    color: white;
+    padding-top: 4rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-brand .logo-text h3 {
+    color: white;
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.footer-brand .logo-telugu {
+    color: var(--clr-secondary-light);
+}
+
+.footer-brand p {
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 300px;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-links a:hover {
+    color: var(--clr-secondary);
+    padding-left: 5px;
+}
+
+.footer-contact p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.75rem;
+}
+
+.footer-bottom {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ==========================================================================
+   Gallery Section
+   ========================================================================== */
+.gallery {
+    padding: var(--section-pad);
+    background-color: var(--clr-bg-alt);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    aspect-ratio: 4/3;
+    background-color: var(--clr-bg-main);
+    transition: var(--transition);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.gallery-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--clr-secondary-light) 0%, #F3F4F6 100%);
+    color: var(--clr-text-muted);
+    font-weight: 500;
+    border: 2px dashed var(--clr-border);
+    border-radius: var(--radius-md);
+}
+
+/* ==========================================================================
+   Brands Section
+   ========================================================================== */
+.brands {
+    padding: var(--section-pad);
+    background-color: var(--clr-bg-main);
+}
+
+.brands-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.brand-card {
+    text-align: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--clr-border);
+    transition: var(--transition);
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--clr-primary-light);
+    transform: translateY(-3px);
+}
+
+.brand-card img {
+    max-width: 100%;
+    max-height: 85px;
+    object-fit: contain;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--clr-primary);
+    text-align: center;
+}
+
+.brand-desc {
+    font-size: 0.8rem;
+    color: var(--clr-text-muted);
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+/* Tablet */
+@media (min-width: 768px) {
+    .hero-features {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+    
+    .trust-bar-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-container {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .desktop-nav {
+        display: flex;
+    }
+    
+    .mobile-menu-btn {
+        display: none;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: center;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .trust-bar-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .why-us-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .floating-card {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: -10%;
+        transform: translateY(-50%);
+        width: 80%;
+        z-index: 2;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr 1.5fr;
+    }
+}
+
+/* ==========================================================================
+   Store Page Specific Styles
+   ========================================================================== */
+.store-hero {
+    padding: 6rem 0 3rem;
+}
+.store-subtitle {
+    font-size: 1.125rem;
+    color: var(--clr-text-light);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+.store-trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.store-trust-badges .badge {
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--clr-primary);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--clr-border);
+}
+.store-category-nav {
+    background: white;
+    border-bottom: 1px solid var(--clr-border);
+    position: sticky;
+    top: 70px;
+    z-index: 90;
+    overflow-x: auto;
+}
+.store-category-nav .cat-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    white-space: nowrap;
+}
+.store-category-nav .cat-links a {
+    display: block;
+    padding: 1rem 0;
+    color: var(--clr-text-main);
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    transition: var(--transition);
+}
+.store-category-nav .cat-links a:hover {
+    color: var(--clr-primary);
+    border-bottom-color: var(--clr-primary);
+}
+.store-section {
+    padding: 5rem 0;
+}
+.store-section:nth-child(even) {
+    background-color: var(--clr-bg-main);
+}
+.section-desc {
+    text-align: center;
+    color: var(--clr-text-light);
+    margin-bottom: 3rem;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.product-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--clr-border);
+    overflow: hidden;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+.product-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+    border-color: var(--clr-primary-light);
+}
+.product-img-box {
+    height: 200px;
+    background: linear-gradient(135deg, var(--clr-secondary-light) 0%, #F3F4F6 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--clr-border);
+}
+.img-placeholder {
+    color: var(--clr-text-muted);
+    font-weight: 500;
+}
+.product-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--clr-primary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.product-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+.product-info h4 {
+    margin: 0 0 0.5rem;
+    font-size: 1.125rem;
+    color: var(--clr-text-main);
+}
+.product-info .price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+    margin: 0 0 1rem;
+}
+.suitable-for {
+    font-size: 0.875rem;
+    color: var(--clr-text-light);
+    margin-bottom: 1rem;
+}
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.features-list li {
+    font-size: 0.875rem;
+    color: var(--clr-text-light);
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.25rem;
+}
+.features-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #00A651;
+    font-weight: bold;
+}
+.product-actions {
+    padding: 1.5rem;
+    border-top: 1px solid var(--clr-border);
+    background: #fdfdfd;
+}
+.btn-whatsapp {
+    width: 100%;
+    background-color: #25D366;
+    color: white;
+    text-align: center;
+}
+.btn-whatsapp:hover {
+    background-color: #1ebe5d;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+}
+.spare-pill {
+    background: white;
+    border: 1px solid var(--clr-border);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    color: var(--clr-text-main);
+    box-shadow: var(--shadow-sm);
+}
